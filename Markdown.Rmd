@@ -2,7 +2,25 @@
 title: "Примеры статей"
 author: "Косогоров Дмитрий"
 date: "2024-10-09"
-output: html_document
+output:
+  pdf_document: 
+        latex_engine: xelatex
+  html_document: default
+
+keep_markdown: true        
+keep_tex: true        
+header-includes:
+   - \XeTeXdefaultencoding utf8
+   - \usepackage{xltxtra}
+   - \usepackage{fontspec}
+   - \setmainfont{Times New Roman}
+   - \setsansfont{Arial}
+   - \setmonofont{Courier New}
+   - \newfontfamily{\cyrillicfont}{Times New Roman}
+   - \newfontfamily{\cyrillicfonttt}{Courier New} 
+   - \newfontfamily{\cyrillicfontsf}{Arial} 
+
+   
 ---
 
 
@@ -66,6 +84,10 @@ dementia: A cohort study in the UK Biobank (<https://www.researchgate.net/public
 
 В итоге данная статья предположительно содержит механистический анализ.
 
+
+А вот пример формулы в формате LaTex:
+
+\begin{equation}a_0=\frac{1}{T_p} \int\limits_{\frac{T_p}{2}}^{\frac{-T_p}{2}}f(t)dt    \end{equation}  
 
 Ссылка на Github:
 <https://github.com/DmitriyKosogorov/R_Markdown_test.git>
